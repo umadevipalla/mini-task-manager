@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TaskApiService } from './task-api.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'mini-task-manager';
+  constructor() {}
 }

@@ -1,0 +1,5 @@
+<div class="list" (dragover)="allowDrop($event)" (drop)="drop($event)">
+    <div class="task">
+        <app-task *ngFor="let val of taskPriority" [task]="val" (crudOperation)="updateOrDeleteOperation($event)"></app-task>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+<div class="task-container">
+    <div draggable="true" ondragstart="drag(event)" class="content-conatiner">
+        <div class="text-conatiner">
+            <div>
+                <label><strong>Description:</strong></label>
+                <p class="task" id="{{task?.id}}">{{task?.message}}</p>
+            </div>
+            <div>
+                <label><strong>Assignee:</strong></label>
+                <div class="task"> {{task?.assigned_name}}</div>
+            </div>
+        </div>
+        <div class="crud-operation">
+            <div (click)="onClickOfUpdateTask()">update</div>
+            <div (click)="onClickOfDeleteTask()">delete</div>
+        </div>
+    </div>
+</div>

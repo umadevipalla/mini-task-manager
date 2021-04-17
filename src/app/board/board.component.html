@@ -1,0 +1,20 @@
+<div class="main-container">
+    <div class="add-task-container">
+        <button type="button" class="btn btn-secondary" (click)="onClickOfAddTask()">Add Task...</button>
+        <app-modal-popup *ngIf="popup" [updateValue]="updateVal" (valueChange)='displayFormInput($event)'></app-modal-popup>
+    </div>
+    <div class="list-container">
+        <div class="high-priority-list">
+            <h2>High Priority list</h2>
+            <app-list [taskPriority]="highPriorityTaskList" (crudOperationList)="getTask($event)"></app-list>
+        </div>
+        <div class="medium-priority-list">
+            <h2>Medium Priority list</h2>
+            <app-list [taskPriority]="mediumPriorityTaskList" (crudOperationList)="getTask($event)"></app-list>
+        </div>
+        <div class="low-priority-list">
+            <h2>Low Priority list</h2>
+            <app-list [taskPriority]="lowPriorityTaskList" (crudOperationList)="getTask($event)"></app-list>
+        </div>
+    </div>
+</div>

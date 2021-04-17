@@ -1,0 +1,15 @@
+
+.add-task-container {
+    padding: 15px;
+}
+.list-container {
+    display: flex;
+    padding: 0 5px;
+    height: 100vh;
+    .high-priority-list, .medium-priority-list, .low-priority-list {
+        display: block;
+        h2 {
+            margin-left: 10px;
+        }
+    }
+}

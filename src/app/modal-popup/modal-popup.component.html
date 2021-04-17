@@ -1,0 +1,55 @@
+<div class="overlay" >
+    <div class="popup">
+        <a class="close" (click)="onClickOfClose()">&times;</a>
+        <div class="container">
+            <div class="row">
+                <div class="col-10">
+                    <div class="jumbotron">
+                        <h2>Add/Update Task</h2>
+                        <form #modalForm="ngForm"  (ngSubmit)="onSubmit(modalForm.value)">
+                            <div class="row">
+                                <div class="col-sm-6 form-group">
+                                    <label for="message">Message</label>
+                                    <input type="text" class="form-control" ngModel
+                                    name="message" #messageRef="ngModel" [class.ctrl-error] = "message?.touched &&
+                                    message?.errors?.required" minlength="3" required/>
+                                    <div *ngIf="message?.touched &&
+                                    message?.errors?.required" class="error-message">
+                                        <div>Message is required</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12 form-group">
+                                    <label>Priority</label>
+                                    <div class="inline-style">
+                                        <label class="check-label">
+                                            <input type="radio" name="priority" value="High" ngModel #priorityRef="ngModel"><i class="blue"></i> High
+                                        </label>
+                                        <div class="spacer"></div>
+                                        <label class="check-label">
+                                            <input type="radio" name="priority" value="Medium" ngModel #priorityRef="ngModel"><i class="blue"></i> Medium
+                                        </label>
+                                        <div class="spacer"></div>
+                                        <label class="check-label">
+                                            <input type="radio" name="priority" value="Low" ngModel #priorityRef="ngModel"><i class="blue"></i> Low
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 form-group">
+                                <label>Assignee name</label>
+                                <input type="text" class="form-control" name="assigneeName" ngModel #assigneeNameRef="ngModel">
+                            </div>
+                            <div class="col-sm-6 form-group">
+                                <label>Due Date</label>
+                                <input type="text" class="form-control" name="dueDate" ngModel #dueDateRef="ngModel">
+                            </div>
+                            <button type="submit" class="btn btn-secondary">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

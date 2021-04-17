@@ -1,0 +1,19 @@
+p {
+    margin: 0 0 6px 0;
+}
+.task-container {
+    background: bisque;
+    padding: 10px;
+    margin: 10px;
+}
+.text-conatiner {
+    display: flex;
+    justify-content: space-between;
+}
+.crud-operation {
+    display: flex;
+    cursor: pointer;
+    div {
+        padding: 5px;
+    }
+}
